@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repository</title>
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<input type="text" id='myinput'>
+	<button type="button" id='mybtn'>Click me</button>
+	<p id="demo"></p>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$("#mybtn").click(function(){
+				if($.isNumeric($("#myinput").val()))
+				{
+					$("#demo").html("Value is Numeric");
+				}
+				else
+				{
+					$("#demo").html("Value is not Numeric");
+				}
+			});	
+		});
+	</script>
+</body>
+</html>
